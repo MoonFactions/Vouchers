@@ -11,8 +11,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class VoucherHandler {
 
@@ -43,6 +45,10 @@ public class VoucherHandler {
             }
         }
         return Optional.empty();
+    }
+
+    public List<String> getVoucherNames() {
+        return this.voucherMap.values().stream().map(Voucher::getName).collect(Collectors.toList());
     }
 
 

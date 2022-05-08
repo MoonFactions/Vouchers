@@ -3,6 +3,8 @@ package net.moon.vouchers;
 import com.samjakob.spigui.SpiGUI;
 import lombok.Getter;
 import net.moon.vouchers.command.VoucherCommand;
+import net.moon.vouchers.utils.converter.VoucherConverter;
+import net.moon.vouchers.voucher.Voucher;
 import net.moon.vouchers.voucher.VoucherHandler;
 import net.moon.vouchers.voucher.listener.VoucherListener;
 import org.bukkit.plugin.PluginManager;
@@ -31,6 +33,7 @@ public class VoucherPlugin extends JavaPlugin {
 
     private void registerCommands() {
         CommandHandler commandHandler = new CommandHandler(this, "vouchers");
+        commandHandler.registerConverter(Voucher.class, new VoucherConverter(this));
         commandHandler.registerCommand(new VoucherCommand(this));
     }
 
