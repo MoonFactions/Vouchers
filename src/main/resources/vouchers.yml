@@ -1,0 +1,15 @@
+voucher_menu_title: "&9Voucher Menu"
+voucher_menu_rows: 5
+vouchers:
+  test:
+    material: PAPER
+    data: 0
+    name: "Test"
+    display_name: "&3Testing Voucher"
+    lore:
+      - '&8&m--------------------------------'
+      - '&eThis is a voucher for testing.'
+      - '&8&m--------------------------------'
+    commands:
+      - 'broadcast testing voucher works'
+      - 'broadcast see!'

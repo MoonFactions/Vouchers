@@ -1,0 +1,4 @@
+name: "Vouchers"
+author: "Moon Development Team"
+version: 1.0-SNAPSHOT
+main: net.moon.vouchers.VoucherPlugin
