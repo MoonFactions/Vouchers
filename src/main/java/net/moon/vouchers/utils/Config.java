@@ -1,5 +1,6 @@
 package net.moon.vouchers.utils;
 
+import org.bukkit.Material;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,7 +20,6 @@ public class Config extends YamlConfiguration {
         }
 
         this.load();
-        this.save();
     }
 
     public void load() {
@@ -29,13 +29,4 @@ public class Config extends YamlConfiguration {
             exception.printStackTrace();
         }
     }
-
-    public void save() {
-        try {
-            this.save(this.file);
-        } catch (IOException exception) {
-            exception.printStackTrace();
-        }
-    }
-
 }

@@ -35,7 +35,7 @@ public class VoucherCommand {
     }
     
     @SubCommand(label = "give", permission = "voucher.admin", parent = "voucher")
-    public void executeGive(CommandSender sender, @Parameter(name = "player") Player player, @Parameter(name = "voucherName")Voucher voucher, Integer amount) {
+    public void executeGive(CommandSender sender, @Parameter(name = "player") Player player, @Parameter(name = "voucherName")Voucher voucher, @Parameter(name = "amount") Integer amount) {
         if (player == null) {
             sender.sendMessage(CC.chat("&cThat player is not online."));
             return;
